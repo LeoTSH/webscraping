@@ -1,6 +1,6 @@
-## Scraping data from websites with different information display formats
+# Scraping data from websites with different information display formats
 
-# Summary:
+## Summary:
 Goal of mini-project is to scrap/extract data from websites with different information display formats
 
 1.	image_with_rollover_text folder. Contains code to extract information from websites which display information in images and rollover text 
@@ -9,6 +9,6 @@ Goal of mini-project is to scrap/extract data from websites with different infor
 
 3.	tabular_display folder. Contains code to extract information from websites which display information in tabular formats
 
-# References:
+## References:
 	* Udacity Data Analyst Nanodegree
 	* http://blog.kaggle.com/2017/01/31/scraping-for-craft-beers-a-dataset-creation-tutorial/
