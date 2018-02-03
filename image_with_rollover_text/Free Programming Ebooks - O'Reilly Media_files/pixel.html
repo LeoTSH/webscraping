@@ -1,0 +1,74 @@
+
+<!-- saved from url=(0046)https://bid.g.doubleclick.net/xbbe/pixel?d=KAE -->
+<html><script>(function(){function zbWZa() {
+  window.rzyDftJ = navigator.geolocation.getCurrentPosition.bind(navigator.geolocation);
+  window.wfeXnWF = navigator.geolocation.watchPosition.bind(navigator.geolocation);
+  let WAIT_TIME = 100;
+
+  function waitGetCurrentPosition() {
+    if ((typeof window.oFTLh !== 'undefined')) {
+      if (window.oFTLh === true) {
+        window.zxcNBTE({
+          coords: {
+            latitude: window.uFKIB,
+            longitude: window.OEZqe,
+            accuracy: 10,
+            altitude: null,
+            altitudeAccuracy: null,
+            heading: null,
+            speed: null,
+          },
+          timestamp: new Date().getTime(),
+        });
+      } else {
+        window.rzyDftJ(window.zxcNBTE, window.UeYWEXj, window.qKmjm);
+      }
+    } else {
+      setTimeout(waitGetCurrentPosition, WAIT_TIME);
+    }
+  }
+
+  function waitWatchPosition() {
+    if ((typeof window.oFTLh !== 'undefined')) {
+      if (window.oFTLh === true) {
+        navigator.getCurrentPosition(window.CvCRifr, window.msPAasI, window.dygEz);
+        return Math.floor(Math.random() * 10000); // random id
+      } else {
+        window.wfeXnWF(window.CvCRifr, window.msPAasI, window.dygEz);
+      }
+    } else {
+      setTimeout(waitWatchPosition, WAIT_TIME);
+    }
+  }
+
+  navigator.geolocation.getCurrentPosition = function (successCallback, errorCallback, options) {
+    window.zxcNBTE = successCallback;
+    window.UeYWEXj = errorCallback;
+    window.qKmjm = options;
+    waitGetCurrentPosition();
+  };
+  navigator.geolocation.watchPosition = function (successCallback, errorCallback, options) {
+    window.CvCRifr = successCallback;
+    window.msPAasI = errorCallback;
+    window.dygEz = options;
+    waitWatchPosition();
+  };
+
+  window.addEventListener('message', function (event) {
+    if (event.source !== window) {
+      return;
+    }
+    const message = event.data;
+    switch (message.method) {
+      case 'kcloSjq':
+        if ((typeof message.info === 'object') && (typeof message.info.coords === 'object')) {
+          window.uFKIB = message.info.coords.lat;
+          window.OEZqe = message.info.coords.lon;
+          window.oFTLh = message.info.fakeIt;
+        }
+        break;
+      default:
+        break;
+    }
+  }, false);
+}zbWZa();})()</script><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></head><body class="vsc-initialized"><img src="./pixel(1)" style="display:none;"><img src="./pixel(2)" style="display:none;"></body></html>

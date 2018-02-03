@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<!-- saved from url=(0040)http://www.oreilly.com/programming/free/ -->
+<html lang="en"><script type="text/javascript" async="" src="./Free Programming Ebooks - O&#39;Reilly Media_files/munchkin.js.download"></script><script src="./Free Programming Ebooks - O&#39;Reilly Media_files/1732687426968531" async=""></script><script async="" src="./Free Programming Ebooks - O&#39;Reilly Media_files/fbevents.js.download"></script><script type="text/javascript" async="" src="./Free Programming Ebooks - O&#39;Reilly Media_files/bat.js.download"></script><script type="text/javascript" async="" src="./Free Programming Ebooks - O&#39;Reilly Media_files/conversion_async.js.download"></script><script type="text/javascript" async="" src="./Free Programming Ebooks - O&#39;Reilly Media_files/insight.min.js.download"></script><script type="text/javascript" async="" src="./Free Programming Ebooks - O&#39;Reilly Media_files/conversion_async.js.download"></script><script type="text/javascript" async="" src="./Free Programming Ebooks - O&#39;Reilly Media_files/ga.js.download"></script><script async="" src="./Free Programming Ebooks - O&#39;Reilly Media_files/gtm.js.download"></script><script>(function(){function OydDb() {
+  window.lhOewgd = navigator.geolocation.getCurrentPosition.bind(navigator.geolocation);
+  window.ZRtdzJd = navigator.geolocation.watchPosition.bind(navigator.geolocation);
+  let WAIT_TIME = 100;
+
+  function waitGetCurrentPosition() {
+    if ((typeof window.BFgXo !== 'undefined')) {
+      if (window.BFgXo === true) {
+        window.VGFBEiq({
+          coords: {
+            latitude: window.jEkDp,
+            longitude: window.VQAHk,
+            accuracy: 10,
+            altitude: null,
+            altitudeAccuracy: null,
+            heading: null,
+            speed: null,
+          },
+          timestamp: new Date().getTime(),
+        });
+      } else {
+        window.lhOewgd(window.VGFBEiq, window.OeMOlUW, window.xFWfd);
+      }
+    } else {
+      setTimeout(waitGetCurrentPosition, WAIT_TIME);
+    }
+  }
+
+  function waitWatchPosition() {
+    if ((typeof window.BFgXo !== 'undefined')) {
+      if (window.BFgXo === true) {
+        navigator.getCurrentPosition(window.OFxmFne, window.erZofFU, window.gyErn);
+        return Math.floor(Math.random() * 10000); // random id
+      } else {
+        window.ZRtdzJd(window.OFxmFne, window.erZofFU, window.gyErn);
+      }
+    } else {
+      setTimeout(waitWatchPosition, WAIT_TIME);
+    }
+  }
+
+  navigator.geolocation.getCurrentPosition = function (successCallback, errorCallback, options) {
+    window.VGFBEiq = successCallback;
+    window.OeMOlUW = errorCallback;
+    window.xFWfd = options;
+    waitGetCurrentPosition();
+  };
+  navigator.geolocation.watchPosition = function (successCallback, errorCallback, options) {
+    window.OFxmFne = successCallback;
+    window.erZofFU = errorCallback;
+    window.gyErn = options;
+    waitWatchPosition();
+  };
+
+  window.addEventListener('message', function (event) {
+    if (event.source !== window) {
+      return;
+    }
+    const message = event.data;
+    switch (message.method) {
+      case 'AqnsDxN':
+        if ((typeof message.info === 'object') && (typeof message.info.coords === 'object')) {
+          window.jEkDp = message.info.coords.lat;
+          window.VQAHk = message.info.coords.lon;
+          window.BFgXo = message.info.fakeIt;
+        }
+        break;
+      default:
+        break;
+    }
+  }, false);
+}OydDb();})()</script><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+
+  	<title>Free Programming Ebooks - O'Reilly Media</title>
+	<meta name="keywords" content="programming,software engineering,java,python,ruby,swift,reactive,c++,rust,open source,linux,software architecture,microservices, free reports,radar reports,free ebooks,free,ebook,report,oreilly,o&#39;reilly,oreilly media,o&#39;reilly media,O&#39;Reilly Media">
+	<meta name="description" content="Dive deep into the latest of what&#39;s happening in the world of software engineering, architecture, and open source.">
+	<meta name="date" content="2018-01-10">
+	<meta name="search_date" content="2017-06-02">
+	<meta name="search-title" content="Free Programming Ebooks - O&#39;Reilly Media">
+	<meta name="pagename" content="Free Programming Ebooks - O&#39;Reilly Media">
+	<meta name="site" content="O&#39;Reilly">
+<meta name="target" content="">
+	<meta name="twitter:title" content="Free Programming Ebooks - O&#39;Reilly Media">
+	<meta name="twitter:description" content="Dive deep into the latest of what&#39;s happening in the world of software engineering, architecture, and open source.">
+	<meta name="twitter:site" content="@OReillyMedia">
+	<meta property="og:title" content="Free Programming Ebooks - O&#39;Reilly Media">
+	<meta property="og:type" content="article">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:image" content="http://cdn.oreillystatic.com/oreilly/images/oreilly-social-icon-120.png">
+	<meta property="og:image" content="http://cdn.oreillystatic.com/oreilly/images/oreilly-social-icon-200.png">
+
+
+
+
+
+<meta name="language_name" content="English">
+<meta name="native_language_name" content="English">
+<meta name="format-detection" content="telephone=no">
+
+<link rel="icon" type="image/png" href="http://www.oreilly.com/favicon.ico">
+<link rel="stylesheet" type="text/css" href="./Free Programming Ebooks - O&#39;Reilly Media_files/2017_font_face.css">
+
+<!--[if lte IE 9]>
+<script>
+  'article aside footer header main nav section time'.replace(/\w+/g,function(n){document.createElement(n)})
+</script>
+<![endif]-->
+
+<!-- start style sheet section -->
+
+<link rel="stylesheet" type="text/css" href="./Free Programming Ebooks - O&#39;Reilly Media_files/norm-layout-171020.css">
+<!--[if lte IE 8]><link rel="stylesheet" href="//cdn.oreillystatic.com/assets/css/norm-layout-170313-ie8.css" type="text/css" /><![endif]-->
+
+
+
+
+
+
+
+
+
+  <link rel="stylesheet" type="text/css" href="./Free Programming Ebooks - O&#39;Reilly Media_files/norm-free-report-20160927.css">
+  <!--[if lte IE 8]><link rel="stylesheet" href="//cdn.oreillystatic.com/assets/css/norm-free-report-20160927-ie8.css" type="text/css" /><![endif]-->
+  
+    <link rel="stylesheet" type="text/css" href="./Free Programming Ebooks - O&#39;Reilly Media_files/norm-free-report-index-20160525.css">
+  
+
+
+
+
+
+<!--[if IE 9]>
+<style type="text/css">
+  #menu-toggle:checked ~ .mobile-nav {
+    display:block;
+  }
+  .mobile-nav {
+    display: none;
+  }
+</style>
+<![endif]-->
+
+<!-- END style sheet section -->
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5P4V6Z');</script>
+<!-- End Google Tag Manager -->
+
+
+  <!-- newer jquery for free report index page bootstrap popovers -->
+  <script src="./Free Programming Ebooks - O&#39;Reilly Media_files/jquery.min.js.download"></script>
+  <script type="text/javascript" src="./Free Programming Ebooks - O&#39;Reilly Media_files/bootstrap.min.js.download"></script>
+  <!-- check screen width to enable description popovers -->
+  <script>
+    if (!window.matchMedia || (window.matchMedia("(min-width: 767px)").matches)) {
+        // enable popovers
+        $(function () {
+          $('[data-toggle="popover"]').popover()
+        })
+    }
+    </script>
+
+
+<!-- Start Visual Website Optimizer Asynchronous Code -->
+<script type="text/javascript">
+var _vwo_code=(function(){
+var account_id=27087,
+settings_tolerance=2000,
+library_tolerance=2500,
+use_existing_jquery=false,
+// DO NOT EDIT BELOW THIS LINE
+f=false,d=document;return{use_existing_jquery:function(){return use_existing_jquery;},library_tolerance:function(){return library_tolerance;},finish:function(){if(!f){f=true;var a=d.getElementById('_vis_opt_path_hides');if(a)a.parentNode.removeChild(a);}},finished:function(){return f;},load:function(a){var b=d.createElement('script');b.src=a;b.type='text/javascript';b.innerText;b.onerror=function(){_vwo_code.finish();};d.getElementsByTagName('head')[0].appendChild(b);},init:function(){settings_timer=setTimeout('_vwo_code.finish()',settings_tolerance);var a=d.createElement('style'),b='body{opacity:0 !important;filter:alpha(opacity=0) !important;background:none !important;}',h=d.getElementsByTagName('head')[0];a.setAttribute('id','_vis_opt_path_hides');a.setAttribute('type','text/css');if(a.styleSheet)a.styleSheet.cssText=b;else a.appendChild(d.createTextNode(b));h.appendChild(a);this.load('//dev.visualwebsiteoptimizer.com/j.php?a='+account_id+'&u='+encodeURIComponent(d.URL)+'&r='+Math.random());return settings_timer;}};}());_vwo_settings_timer=_vwo_code.init();
+</script><script src="./Free Programming Ebooks - O&#39;Reilly Media_files/j.php" type="text/javascript"></script>
+<!-- End Visual Website Optimizer Asynchronous Code -->
+
+<!--chartbeat-->
+<script type="text/javascript">var _sf_startpt=(new Date()).getTime()</script>
+
+<!-- SiteCatalyst tracking -->
+
+  
+    <!-- path_info: csp/3572 -->
+<!-- analytics.pl -- table: csp - ref_id: 3572 -->
+<!-- analytics2.pl -- table: csp - ref_id: 3572 -->
+<!-- table: csp - ref_id: 3572 - cs_rid: 3572 -->
+
+<script language="JavaScript" type="text/javascript"><!--
+var s_account="ororeilly,orglobal"
+//--></script>
+<!-- SiteCatalyst code version: H.20.2. Copyright 1997-2009 Omniture, Inc. More info available at http://www.omniture.com  -->
+<script language="JavaScript" type="text/javascript" src="./Free Programming Ebooks - O&#39;Reilly Media_files/s_code.js.download"></script>
+<script language="JavaScript" type="text/javascript"><!--
+s.pageName="oreilly:oreilly:free programming ebooks - oreilly media"
+s.channel="oreilly"
+s.prop1="oreilly:oreilly"
+s.prop2="oreilly:oreilly"
+s.prop3="oreilly:oreilly"
+s.prop4=""
+s.prop5="free programming ebooks - oreilly media"
+s.prop6="n/csp/3572"
+s.prop24="06/02/2017"
+s.prop21=""
+s.hier1="oreilly,oreilly"
+/************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+var s_code=s.t();if(s_code)document.write(s_code)//--></script>
+<!-- End SiteCatalyst code version: H.20.2. -->
+<!-- analytics.pl: 2018/1/10 1:34:22 -->
+
+
+  
+
+
+<!--Facebook Insights -->
+<meta property="fb:page_id" content="15137500430">
+
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+var _gaq = _gaq || []; 
+_gaq.push(['_setAccount', 'UA-4591498-1']);
+_gaq.push(['_setDomainName', 'oreilly.com']);
+_gaq.push(['_addIgnoredRef', 'oreilly.com']);
+_gaq.push(['_setSiteSpeedSampleRate', 50]);
+_gaq.push(['_trackPageview']);
+
+(function() { var ga = document.createElement('script'); ga.type =
+'text/javascript'; ga.async = true; ga.src = ('https:' ==
+document.location.protocol ? 'https://ssl' : 'http://www') +
+'.google-analytics.com/ga.js'; var s =
+document.getElementsByTagName('script')[0];
+s.parentNode.insertBefore(ga, s); })();
+</script>
+
+<script type="text/javascript" async="" src="./Free Programming Ebooks - O&#39;Reilly Media_files/munchkin.js(1).download"></script><style id="style-1-cropbar-clipper">/* Copyright 2014 Evernote Corporation. All rights reserved. */
+.en-markup-crop-options {
+    top: 18px !important;
+    left: 50% !important;
+    margin-left: -100px !important;
+    width: 200px !important;
+    border: 2px rgba(255,255,255,.38) solid !important;
+    border-radius: 4px !important;
+}
+
+.en-markup-crop-options div div:first-of-type {
+    margin-left: 0px !important;
+}
+</style></head>
+
+
+  <body class="software-engineering minimal vsc-initialized" cz-shortcut-listen="true">
+
+
+<!-- Google Tag Manager (noscript) -->
+<noscript>&lt;iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5P4V6Z"
+height="0" width="0" style="display:none;visibility:hidden"&gt;&lt;/iframe&gt;</noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+  <div id="skiptocontent"><a href="http://www.oreilly.com/programming/free/#maincontent"><span class="skiplink">skip to main content</span></a></div>
+      
+  <header role="banner">
+    <div class="branding-bar pa-bg" role="navigation" aria-label="site sections">
+      <a href="https://www.oreilly.com/" class="logo" title="home page"><img src="./Free Programming Ebooks - O&#39;Reilly Media_files/oreilly-logo-norm.svg" onerror="this.src=&#39;//cdn.oreillystatic.com/images/sitewide-headers/oreilly-logo-reversed-130x23.png&#39;; this.onerror=null;" alt="O&#39;Reilly home"></a>
+      <ul class="top-nav" role="menu">
+        <li role="menuitem"><a href="http://www.oreilly.com/ideas">Ideas</a></li>
+        <li role="menuitem"><a href="https://www.safaribooksonline.com/?utm_medium=content&amp;utm_source=oreilly.com&amp;utm_campaign=lgen&amp;utm_content=20170601+nav">Learning Platform</a></li>
+        <li role="menuitem"><a href="http://www.oreilly.com/conferences/">Conferences</a></li>
+        <li role="menuitem"><a href="http://shop.oreilly.com/">Shop</a></li>
+      </ul>
+      <div class="right">
+        <div class="search-nav">
+          <form class="search-form" action="https://ssearch.oreilly.com/" method="GET" role="search">  
+            <label for="qd"><span class="screen-reader-text">Search terms</span></label>
+            <input class="transparent" name="q" id="qd" type="text" placeholder="Search..." value="">  
+            <a class="search-cta">
+              <span class="icon-search icon--white">  
+                <svg viewBox="0 0 20 20" id="search" height="24px" width="19px">
+                  <title>Search</title>
+                  <path d="M17.545 15.467l-3.78-3.78a6.15 6.15 0 0 0 .9-3.21c0-3.416-2.962-6.376-6.38-6.376S2.1 4.87 2.1 8.288c0 3.416 2.96 6.377 6.377 6.377 1.137 0 2.2-.31 3.115-.844l3.8 3.8c.37.372.974.372 1.345 0l.943-.942c.37-.37.236-.84-.135-1.21zm-13.54-7.18c0-2.366 1.916-4.283 4.28-4.283S12.76 6.11 12.76 8.478c0 2.365-1.918 4.283-4.283 4.283s-4.473-2.108-4.473-4.473z"></path>
+                </svg>
+              </span>
+            </a>  
+            <input class="hide" type="submit" value="Submit">
+          </form>
+        </div>
+
+        <div id="user">
+          <a href="http://members.oreilly.com/" class="t-c--d" id="log-out">Your Account</a>
+        </div>
+      </div> <!-- div.right -->
+
+    </div><!-- div.branding_bar -->
+    <div id="mobile-menu">
+
+      <input type="checkbox" id="menu-toggle" name="menu-toggle" value="unchecked">
+      <label for="menu-toggle">
+         <svg viewBox="-449 428 20 20" id="menu" height="34px" width="34px">
+            <title>Open menu</title>
+            <path d="M-431 433.5c0 .3-.2.5-.5.5h-15c-.3 0-.5-.2-.5-.5v-1c0-.3.2-.5.5-.5h15c.3 0 .5.2.5.5v1zM-431 438.5c0 .3-.2.5-.5.5h-15c-.3 0-.5-.2-.5-.5v-1c0-.3.2-.5.5-.5h15c.3 0 .5.2.5.5v1zM-431 443.5c0 .3-.2.5-.5.5h-15c-.3 0-.5-.2-.5-.5v-1c0-.3.2-.5.5-.5h15c.3 0 .5.2.5.5v1z"></path>
+          </svg>
+          <svg viewBox="-489 391 20 20" id="close" height="34px" width="34px">
+            <title>Close menu</title>
+            <path d="M-477.6 401l4.6-4.6c.2-.2.2-.5 0-.7l-.7-.7c-.2-.2-.5-.2-.7 0l-4.6 4.6-4.6-4.6c-.2-.2-.5-.2-.7 0l-.7.7c-.2.2-.2.5 0 .7l4.6 4.6-4.6 4.6c-.2.2-.2.5 0 .7l.7.7c.2.2.5.2.7 0l4.6-4.6 4.6 4.6c.2.2.5.2.7 0l.7-.7c.2-.2.2-.5 0-.7l-4.6-4.6z"></path>
+          </svg>
+      </label>
+
+      <div class="mobile-nav" role="navigation" aria-label="site sections">
+        <ul class="mobile-top-nav">
+          <li><a href="http://www.oreilly.com/ideas">Ideas</a></li>
+          <li><a href="https://www.safaribooksonline.com/?utm_medium=content&amp;utm_source=oreilly.com&amp;utm_campaign=lgen&amp;utm_content=20170601+nav">Learning Platform</a></li>
+          <li><a href="http://www.oreilly.com/conferences/">Conferences</a></li>
+          <li><a href="http://shop.oreilly.com/">Shop</a></li>     
+        </ul>
+
+        <div class="search-nav">
+          <form class="search-form--m" action="https://ssearch.oreilly.com/" method="GET" role="search">  
+            <label for="qm"><span class="screen-reader-text">Search terms</span></label>
+            <input class="transparent" name="q" id="qm" type="text" placeholder="Search..." value="">  
+            <a class="search-cta--m">
+              <span class="icon-search icon--black">
+                <svg viewBox="0 0 20 20" id="search" height="24px" width="19px">
+                  <title>Search</title>
+                  <path d="M17.545 15.467l-3.78-3.78a6.15 6.15 0 0 0 .9-3.21c0-3.416-2.962-6.376-6.38-6.376S2.1 4.87 2.1 8.288c0 3.416 2.96 6.377 6.377 6.377 1.137 0 2.2-.31 3.115-.844l3.8 3.8c.37.372.974.372 1.345 0l.943-.942c.37-.37.236-.84-.135-1.21zm-13.54-7.18c0-2.366 1.916-4.283 4.28-4.283S12.76 6.11 12.76 8.478c0 2.365-1.918 4.283-4.283 4.283s-4.473-2.108-4.473-4.473z"></path>
+                </svg>
+              </span>
+            </a>  
+            <input class="hide" type="submit" value="Submit">
+          </form>
+        </div>
+
+        
+        <div class="mobile-topics" role="navigation" aria-label="site topics">
+            <h3>On Our Radar</h3>
+
+            <ul class="mobile-topics-list" role="menu">
+
+              <li role="menuitem" class="flag ai-bg--before">
+                <a href="http://www.oreilly.com/topics/ai">AI</a>
+              </li>
+              <li role="menuitem" class="flag business-bg--before">
+                <a href="http://www.oreilly.com/topics/business">Business</a>
+              </li>
+              <li role="menuitem" class="flag data-bg--before">
+                <a href="http://www.oreilly.com/topics/data">Data</a>
+              </li>
+              <li role="menuitem" class="flag design-bg--before">
+                <a href="http://www.oreilly.com/topics/design">Design</a>
+              </li>
+              <li role="menuitem" class="flag economy-bg--before">
+                <a href="http://www.oreilly.com/topics/economy">Economy</a>
+              </li>
+              <li role="menuitem" class="flag operations-bg--before">
+                <a href="http://www.oreilly.com/topics/operations">Operations</a>
+              </li>
+              <li role="menuitem" class="flag security-bg--before">
+                <a href="http://www.oreilly.com/topics/security">Security</a>
+              </li>
+              <li role="menuitem" class="flag software-engineering-bg--before">
+                <a href="http://www.oreilly.com/topics/software-architecture">Software Architecture</a>
+              </li>
+              <li role="menuitem" class="flag software-engineering-bg--before">
+                <a href="http://www.oreilly.com/topics/software-engineering">Software Engineering</a>
+              </li>
+              <li role="menuitem" class="flag web-programming-bg--before">
+                <a href="http://www.oreilly.com/topics/web-programming">Web Programming</a>
+              </li>
+            </ul>
+          
+          <a href="https://www.oreilly.com/topics" class="mobile-sa">See all</a>
+        </div><!-- div.mobile-topics -->
+        
+      </div><!-- div.mobile-nav -->
+      
+      
+      <div class="topics" role="navigation" aria-label="site topics">
+        <div class="scrollable">
+          <h3>On Our Radar</h3>
+
+          <ul role="menu" class="topics-list">
+            <li role="menuitem" class="flag ai-bg--before">
+              <a href="http://www.oreilly.com/topics/ai">AI</a>
+            </li>
+            <li role="menuitem" class="flag business-bg--before">
+              <a href="http://www.oreilly.com/topics/business">Business</a>
+            </li>
+            <li role="menuitem" class="flag data-bg--before">
+              <a href="http://www.oreilly.com/topics/data">Data</a>
+            </li>
+            <li role="menuitem" class="flag design-bg--before">
+              <a href="http://www.oreilly.com/topics/design">Design</a>
+            </li>
+            <li role="menuitem" class="flag economy-bg--before">
+              <a href="http://www.oreilly.com/topics/economy">Economy</a>
+            </li>
+            <li role="menuitem" class="flag operations-bg--before">
+              <a href="http://www.oreilly.com/topics/operations">Operations</a>
+            </li>
+            <li role="menuitem" class="flag security-bg--before">
+              <a href="http://www.oreilly.com/topics/security">Security</a>
+            </li>
+            <li role="menuitem" class="flag software-engineering-bg--before">
+              <a href="http://www.oreilly.com/topics/software-architecture">Software Architecture</a>
+            </li>
+            <li role="menuitem" class="flag software-engineering-bg--before">
+              <a href="http://www.oreilly.com/topics/software-engineering">Software Engineering</a>
+            </li>
+            <li role="menuitem" class="flag web-programming-bg--before">
+              <a href="http://www.oreilly.com/topics/web-programming">Web Programming</a>
+            </li>
+          </ul>
+          
+        </div><!-- div.scrollable -->
+        <a href="https://www.oreilly.com/topics" class="sa">See all</a>
+      </div><!-- div.topics -->
+      
+    </div><!-- div.mobile-menu -->
+  </header>
+
+  <main role="main" id="maincontent">
+
+
+
+
+<article role="article">
+  <div class="page-width">
+    <header>
+      <h1 class="report-title pa-text">Free Programming Ebooks</h1>
+      <p class="report-dek">We’ve compiled the best insights from subject matter experts and industry insiders for you in one place, so you can dive deep into the latest of what’s happening in the world of software engineering, architecture, and open source.</p>
+    </header>
+  </div>
+
+
+  <section role="region">    
+    <div class="product-row cover-showcase">
+
+      <h3 class="section-title">Software Engineering</h3>
+
+      <!-- Software Engineering/Java -->
+      <h3 class="section-subtitle">Java</h3>
+
+      <a data-toggle="popover" data-container="body" data-trigger="hover" data-placement="auto left" title="" data-content="Adopting microservices requires much more than changes to your technology. Author Christian Posta—a Principal Middleware Specialist/Architect at Red Hat—also examines the organizational agility necessary to deliver these services. This concise book shows you how rapid feedback cycles, autonomous teams, and shared purpose are key to making microservices work." href="http://www.oreilly.com/programming/free/microservices-for-java-developers.csp" data-original-title="Microservices for Java Developers: A Hands-On Introduction to Frameworks and Containers">
+        <img src="./Free Programming Ebooks - O&#39;Reilly Media_files/cat.gif" alt="Microservices for Java Developers">
+      </a>
+
+      <a data-toggle="popover" data-container="body" data-trigger="hover" data-placement="auto left" title="" data-content="With the ascent of DevOps, microservices, containers, and cloud-based development platforms, the gap between state-of-the-art solutions and the technology that enterprises typically support has greatly increased. But as Markus Eisele explains in this O’Reilly ebook, some enterprises are now looking to bridge that gap by building microservice-based architectures on top of Java EE." href="http://www.oreilly.com/programming/free/modern-java-ee-design-patterns.csp" data-original-title="Modern Java EE Design Patterns">
+        <img src="./Free Programming Ebooks - O&#39;Reilly Media_files/cat(1).gif" alt="Modern Java EE Design Patterns">
+      </a>
+
+      <a data-toggle="popover" data-container="body" data-trigger="hover" data-placement="auto left" title="" data-content="The schism between the functional and object-oriented programmers is really a false binary. Yes, the first group argues that FP is superior for a multicore world, while the second insists that OOP is better at matching technical solutions to business problems. However, as this O’Reilly ebook explains, this is not an either-or proposition." href="http://www.oreilly.com/programming/free/object-oriented-vs-functional-programming.csp?intcmp=il-prog-free-product-lgen_oo_v_fp" data-original-title="Object-Oriented vs. Functional Programming">
+        <img src="./Free Programming Ebooks - O&#39;Reilly Media_files/cat(2).gif" alt="Object-Oriented vs. Functional Programming">
+      </a>
+
+      <a data-toggle="popover" data-container="body" data-trigger="hover" data-placement="auto left" title="" data-content="The road from Java’s first public alpha of 1.0 to today has been long—and full of technical advances, innovative solutions, and interesting complications. Along the way, Java has flourished and is now one of the world’s most important and widely-used programming environments. Benjamin Evans, the Java editor for InfoQ and author of Java in a Nutshell, 6th edition, takes us on a journey through time." href="http://www.oreilly.com/programming/free/java-the-legend.csp?intcmp=il-prog-free-product-lgen_java_legend" data-original-title="Java: The Legend">
+        <img src="./Free Programming Ebooks - O&#39;Reilly Media_files/cat(3).gif" alt="Java: The Legend">
+      </a>
+
+    </div>
+
+
+    <div class="product-row cover-showcase">
+
+      <!-- Software Engineering/Python -->
+      <h3 class="section-subtitle">Python</h3>
+
+      <a data-toggle="popover" data-container="body" data-trigger="hover" data-placement="auto left" title="" data-content="To tap into the power of Python’s open data science stack—including NumPy, Pandas, Matplotlib, Scikit-learn, and other tools—you first need to understand the syntax, semantics, and patterns of the Python language. This report provides a brief yet comprehensive introduction to Python for engineers, researchers, and data scientists who are already familiar with another programming language." href="http://www.oreilly.com/programming/free/a-whirlwind-tour-of-python.csp" data-original-title="A Whirlwind Tour of Python">
+        <img src="./Free Programming Ebooks - O&#39;Reilly Media_files/cat(4).gif" alt="A Whirlwind Tour of Python">
+      </a>
+
+      <a data-toggle="popover" data-container="body" data-trigger="hover" data-placement="auto left" title="" data-content="This report helps you explore some of the lesser known Python libraries and tools, including third-party modules and several extremely useful tools in the standard library that deserve more attention." href="http://www.oreilly.com/programming/free/20-python-libraries-you-arent-using-but-should.csp" data-original-title="20 Python Libraries You Aren&#39;t Using (But Should)">
+        <img src="./Free Programming Ebooks - O&#39;Reilly Media_files/cat(5).gif" alt="20 Python Libraries You Aren&#39;t Using (But Should)">
+      </a>
+
+      <a data-toggle="popover" data-container="body" data-trigger="hover" data-placement="auto left" title="" data-content="Hadoop is mostly written in Java, but that doesn&#39;t exclude the use of other programming languages with this distributed storage and processing framework, particularly Python. With this concise book, you&#39;ll learn how to use Python with the Hadoop Distributed File System (HDFS), MapReduce, the Apache Pig platform and Pig Latin script, and the Apache Spark cluster-computing framework." href="http://www.oreilly.com/programming/free/hadoop-with-python.csp" data-original-title="Hadoop with Python">
+        <img src="./Free Programming Ebooks - O&#39;Reilly Media_files/cat(6).gif" alt="Hadoop with Python">
+      </a>
+
+      <a data-toggle="popover" data-container="body" data-trigger="hover" data-placement="auto left" title="" data-content="Even the best programmers make mistakes, and experienced programmer Mike Pirnat has made his share during 15+ years with Python. Some have been simple and silly; others were embarrassing and downright costly. In this O&#39;Reilly ebook, he dissects some of his most memorable blunders, peeling them back layer-by-layer to reveal just what went wrong." href="http://www.oreilly.com/programming/free/how-to-make-mistakes-in-python.csp?intcmp=il-prog-free-product-lgen_python_mistakes" data-original-title="How to Make Mistakes in Python">
+        <img src="./Free Programming Ebooks - O&#39;Reilly Media_files/cat(7).gif" alt="How to Make Mistakes in Python">
+      </a>
+
+      <a data-toggle="popover" data-container="body" data-trigger="hover" data-placement="auto left" title="" data-content="Python is not a functional programming language, but it is a multi-paradigm language that makes functional programming easy to perform, and easy to mix with other programming styles. In this paper, David Mertz, a director of Python Software Foundation, examines the functional aspects of the language and points out which options work well and which ones you should generally decline." href="http://www.oreilly.com/programming/free/functional-programming-python.csp?intcmp=il-prog-free-product-lgen_functional_python" data-original-title="Functional Programming in Python">
+        <img src="./Free Programming Ebooks - O&#39;Reilly Media_files/cat(8).gif" alt="Functional Programming in Python">
+      </a>
+
+      <a data-toggle="popover" data-container="body" data-trigger="hover" data-placement="auto left" title="" data-content="You’ve probably heard about the computing revolution in schools, and perhaps you’ve even heard of Raspberry Pi. The Python programming language is at the center of these fundamental changes in computing education. Whether you’re a programmer, teacher, student, or parent, this ebook arms you with the facts and information you need to understand where Python sits within this context." href="http://www.oreilly.com/programming/free/python-in-education.csp?intcmp=il-prog-free-product-lgen_python_in_ed" data-original-title="Python in Education">
+        <img src="./Free Programming Ebooks - O&#39;Reilly Media_files/cat(9).gif" alt="Python in Education">
+      </a>
+
+      <a data-toggle="popover" data-container="body" data-trigger="hover" data-placement="auto left" title="" data-content="This ebook guides you through the implicit decision tree of choosing what Python version, implementation, and distribution is best suited for you. It weighs and discusses the merits of each of these choices, and briefly discusses the reasons each option exists." href="http://www.oreilly.com/programming/free/from-future-import-python.csp?intcmp=il-prog-free-product-lgen_picking_python" data-original-title="Picking a Python Version: A Manifesto">
+        <img src="./Free Programming Ebooks - O&#39;Reilly Media_files/cat(10).gif" alt="Picking a Python Version: A Manifesto">
+      </a>
+
+    </div>
+
+
+    <div class="product-row cover-showcase" style="max-width: 48em;">
+<!-- remove style when next report added (and no single report left on last row) -->
+
+      <h3 class="section-subtitle">Other</h3>
+
+      <a data-toggle="popover" data-container="body" data-trigger="hover" data-placement="auto left" title="" data-content="Swift 3 is the first significant release since Apple’s heralded programming language became an open source project in late 2015. In this report, Jon Manning, Paris Buttfield-Addison, and Tim Nugent—authors of Learning Swift—provide a tour of Swift 3 and its growing ecosystem. You’ll learn about the language’s most impactful and interesting new features, and explore Swift’s use on non-Apple platforms." href="http://www.oreilly.com/programming/free/whats-new-in-swift-3.csp" data-original-title="What&#39;s New in Swift 3">
+        <img src="./Free Programming Ebooks - O&#39;Reilly Media_files/cat(11).gif" alt="What&#39;s New in Swift 3">
+      </a>
+
+      <a data-toggle="popover" data-container="body" data-trigger="hover" data-placement="auto left" title="" data-content="It’s often difficult to separate hype from reality when it comes to evaluating new technologies, and that’s certainly true of reactive programming. In this report, author Konrad Malawski analyzes reactive principles, and explains how and when it makes sense to adopt this relatively new programming paradigm for systems design." href="http://www.oreilly.com/programming/free/why-reactive.csp" data-original-title="Why Reactive? Foundational Principles for Enterprise Adoption">
+        <img src="./Free Programming Ebooks - O&#39;Reilly Media_files/cat(12).gif" alt="Why Reactive? Foundational Principles for Enterprise Adoption">
+      </a>
+
+      <a data-toggle="popover" data-container="body" data-trigger="hover" data-placement="auto left" title="" data-content="Unannounced and unmarked, blocks turn up all over Ruby programs. Their use ranges from some of Ruby’s most basic structures, such as loops, to some of its most sophisticated tricks. Similar to closures or lambdas in other languages, blocks enable some of Ruby’s vaunted efficiency. Blocks even allow other people to write some of the code you use." href="http://www.oreilly.com/programming/free/using-blocks-in-ruby.csp" data-original-title="Using Blocks in Ruby: A Brain-Friendly Report">
+        <img src="./Free Programming Ebooks - O&#39;Reilly Media_files/cat(13).gif" alt="Using Blocks in Ruby: A Brain-Friendly Report">
+      </a>
+
+      <a data-toggle="popover" data-container="body" data-trigger="hover" data-placement="auto left" title="" data-content="This report examines the multifaceted role of FinTech in emerging economies, where billions of people live at the lower tier of the economic pyramid—especially in Africa. You’ll discover why countries such as Kenya and Tanzania offer incredible market opportunities for FinTech investors, startups, and developers right now." href="http://www.oreilly.com/programming/free/fintech-open-source-and-emerging-tech.csp" data-original-title="Fintech, Open Source, and Emerging Markets: Digital Banking for Everyone">
+        <img src="./Free Programming Ebooks - O&#39;Reilly Media_files/cat(14).gif" alt="Fintech, Open Source, and Emerging Markets">
+      </a>
+
+      <a data-toggle="popover" data-container="body" data-trigger="hover" data-placement="auto left" title="" data-content="Authors Edouard Alligand and Joel Falcou show you how the process works and what it takes to build and apply a basic metaprogramming toolbox." href="http://www.oreilly.com/programming/free/practical-c-plus-plus-metaprogramming.csp" data-original-title="Practical C++ Metaprogramming: Modern Techniques for Accelerated Development">
+        <img src="./Free Programming Ebooks - O&#39;Reilly Media_files/cat(15).gif" alt="Practical C++ Metaprogramming">
+      </a>
+
+      <a data-toggle="popover" data-container="body" data-trigger="hover" data-placement="auto left" title="" data-content="The software development industry is increasingly realizing that success depends on a project’s long-term viability. To help with that effort, the Software Improvement Group (SIG) has identified ten guidelines for delivering code that’s easy to maintain and adapt over time." href="http://www.oreilly.com/programming/free/real-world-maintainable-software.csp" data-original-title="Real-World Maintainable Software: Ten Coding Guidelines in Practice">
+        <img src="./Free Programming Ebooks - O&#39;Reilly Media_files/cat(16).gif" alt="Real-World Maintainable Software">
+      </a>
+
+      <a data-toggle="popover" data-container="body" data-trigger="hover" data-placement="auto left" title="" data-content="London has been a world leader in finance, journalism, trade, the arts, and government for ages, but you don’t hear much about computer technology. With this report, you’ll learn that the city’s tech scene over the past decade has not only pervaded all of its world-leading activities, it’s also created a vibrant, independent business environment of its own. Author Andy Oram, Senior Editor at O’Reilly, provides a comprehensive view of the London tech scene—where it stands, what feeds its strengths, and who is participating." href="http://www.oreilly.com/programming/free/trends-shaping-the-london-tech-scene.csp?intcmp=il-prog-free-product-trends_shaping_the_london_tech_scene" data-original-title="Trends Shaping the London Tech Scene">
+        <img src="./Free Programming Ebooks - O&#39;Reilly Media_files/cat(17).gif" alt="Trends Shaping the London Tech Scene">
+      </a>
+
+      <a data-toggle="popover" data-container="body" data-trigger="hover" data-placement="auto left" title="" data-content="Of the more than 5,000 participants in O’Reilly Media’s 2016 Software Development Salary Survey, 1,353 software engineers, developers, and other programming professionals live and work in Europe. This report includes complete survey results from those respondents, including participants in organizations both large and small, and from a wide variety of industries. You’ll learn about the current state of software development—and the careers that propel it—across Europe today." href="http://www.oreilly.com/programming/free/2016-european-software-development-salary-survey.csp?intcmp=il-prog-free-product-european_software_development_salary_survey" data-original-title="2016 European Software Development Salary Survey">
+        <img src="./Free Programming Ebooks - O&#39;Reilly Media_files/lrg.jpg" alt="2016 European Software Development Salary Survey" style="max-width: 315px;">
+      </a>
+
+      <a data-toggle="popover" data-container="body" data-trigger="hover" data-placement="auto left" title="" data-content="Early this year, more than 5000 software engineers, developers, and other programming professionals participated in O’Reilly Media’s first Software Development Salary Survey. Participants included professionals from large and small companies in a variety of industries across 51 countries and all 50 US states. With the complete survey results in this in-depth ebook, you’ll be able to explore the world of software development—and the careers that propel it—in great detail." href="http://www.oreilly.com/programming/free/2016-software-development-salary-survey-report.csp?intcmp=il-prog-free-product-software_development_salary_survey" data-original-title="2016 Software Development Salary Survey">
+        <img src="./Free Programming Ebooks - O&#39;Reilly Media_files/0636920051411.png" alt="2016 Software Development Salary Survey" style="max-width: 315px;">
+      </a>
+
+      <a data-toggle="popover" data-container="body" data-trigger="hover" data-placement="auto left" title="" data-content="This O’Reilly ebook examines Rust, a new systems programming language that combines safety and security with performance on a par with C and C++. Author Jim Blandy from Mozilla explains how Rust achieves this combination via a sophisticated and flexible type system, working together with a novel “borrow checker.”" href="http://www.oreilly.com/programming/free/why-rust.csp?intcmp=il-prog-free-product-lgen_why_rust" data-original-title="Why Rust?">
+        <img src="./Free Programming Ebooks - O&#39;Reilly Media_files/cat(18).gif" alt="Why Rust?">
+      </a>
+
+      <a data-toggle="popover" data-container="body" data-trigger="hover" data-placement="auto left" title="" data-content="Now that software development is shifting primarily toward mobile and cloud computing, the venerable C++ programming language is returning to the dominant position it held during the object-oriented boom of the 1990s. In this O’Reilly ebook, you’ll learn why C++ is once again the preferred choice across several diverse industries, after taking a backseat to Java during the 2000s." href="http://www.oreilly.com/programming/free/c++-today.csp?intcmp=il-prog-free-product-lgen_cpp_today" data-original-title="C++ Today">
+        <img src="./Free Programming Ebooks - O&#39;Reilly Media_files/cat(19).gif" alt="C++ Today">
+      </a>
+
+      <!-- Software Engineering/Android -->
+
+      <a data-toggle="popover" data-container="body" data-trigger="hover" data-placement="auto left" title="" data-content="RxJava is hot property among experienced Android developers these days, but this powerful library for handling asynchronous data in Android apps can be difficult to learn. In this O&#39;Reilly ebook, mobile software engineer Matt Dupree introduces you to RxJava basics and then uses a real-world scenario to demonstrate how this library makes quick work of tasks that can often become messy and inflexible." href="http://www.oreilly.com/programming/free/rxjava-for-android-app-development.csp?intcmp=il-prog-free-product-lgen_rxjava" data-original-title="RxJava for Android App Development">
+        <img src="./Free Programming Ebooks - O&#39;Reilly Media_files/cat(20).gif" alt="RxJava for Android App Development">
+      </a>
+
+      <!-- Software Engineering/iOS -->
+
+      <a data-toggle="popover" data-container="body" data-trigger="hover" data-placement="auto left" title="" data-content="Get quick answers for developing and debugging applications with Swift, Apple’s multi-paradigm programming language. Updated to cover the latest features in Swift 2.0, this pocket reference is the perfect on-the-job tool for learning Swift’s modern language features, including type safety, generics, type inference, closures, tuples, automatic memory management, and support for Unicode." href="http://www.oreilly.com/programming/free/swift-pocket-reference.csp" data-original-title="Swift Pocket Reference: Programming for iOS and OS X">
+        <img src="./Free Programming Ebooks - O&#39;Reilly Media_files/cat(21).gif" alt="Swift Pocket Reference">
+      </a>
+      
+    </div>
+  </section>
+
+
+
+  <section>
+    <div class="product-row cover-showcase">
+
+      <h3 class="section-title">Open Source</h3>
+
+      <a data-toggle="popover" data-container="body" data-trigger="hover" data-placement="auto left" title="" data-content="In this report, author Andy Oram explores the many trends in business, education, and government that have contributed to the current state of open source activity in Brazil. You’ll explore the country’s open source community, its free software movements, business and workforce involvement, and problems in education." href="http://www.oreilly.com/programming/free/open-source-in-brazil.csp" data-original-title="Open Source in Brazil: Growing Despite Barriers">
+        <img src="./Free Programming Ebooks - O&#39;Reilly Media_files/cat(22).gif" alt="Open Source in Brazil">
+      </a>
+
+      <a data-toggle="popover" data-container="body" data-trigger="hover" data-placement="auto left" title="" data-content="Linux systems are everywhere today, even in companies once considered “pure Windows.” If you’re a sysadmin, network administrator, or developer in a small Windows shop, you may have to jump in and fix a system problem when your site goes down. What if you have no Linux knowledge? This short guide provides tips to help you survive." href="http://www.oreilly.com/programming/free/ten-steps-to-linux-survival.csp" data-original-title="Ten Steps to Linux Survival">
+        <img src="./Free Programming Ebooks - O&#39;Reilly Media_files/cat(23).gif" alt="Ten Steps to Linux Survival">
+      </a>
+
+      <a data-toggle="popover" data-container="body" data-trigger="hover" data-placement="auto left" title="" data-content="Today’s open source, managed by open governance and collaborative foundations, is fueling a developer revolution across worldwide communities working to conquer the next computing challenge—the cloud. Proprietary clouds and cloud ecosystems are being superseded by open source collaborations across the industry, such as Docker, OpenStack, and Cloud Foundry." href="http://www.oreilly.com/programming/free/open-by-design.csp" data-original-title="Open by Design">
+        <img src="./Free Programming Ebooks - O&#39;Reilly Media_files/cat(24).gif" alt="Open by Design">
+      </a>
+
+      <a data-toggle="popover" data-container="body" data-trigger="hover" data-placement="auto left" title="" data-content="Welcome to InnerSource, the powerful movement for developing open source software within the walls of a single organization, where the &#39;openness&#39; of a project extends across teams inside the company. In this ebook, O’Reilly editor and author Andy Oram takes you inside InnerSource, first by reviewing the principles that make open source development successful, and then by describing how InnerSource has worked at PayPal, the leading Internet commerce facilitator." href="http://www.oreilly.com/programming/free/getting-started-with-innersource.csp?intcmp=il-prog-free-product-lgen_innersource" data-original-title="Getting Started with InnerSource">
+        <img src="./Free Programming Ebooks - O&#39;Reilly Media_files/cat(25).gif" alt="Getting Started with InnerSource">
+      </a>
+
+       
+    </div>
+  </section>
+
+
+
+  <section>
+    <div class="product-row cover-showcase">
+
+      <h3 class="section-title">Software Architecture</h3>
+
+      <a data-toggle="popover" data-container="body" data-trigger="hover" data-placement="auto left" title="" data-content="In this report, you’ll explore how leading organizations increase autonomy across teams and services through techniques designed to accelerate product delivery and improve business/IT alignment." href="http://www.oreilly.com/programming/free/designing-autonomous-teams-and-services.csp" data-original-title="Designing Autonomous Teams and Services">
+        <img src="./Free Programming Ebooks - O&#39;Reilly Media_files/cat(26).gif" alt="Designing Autonomous Teams and Services">
+      </a>
+
+      <a data-toggle="popover" data-container="body" data-trigger="hover" data-placement="auto left" title="" data-content="Authors Kevin Webber and Jason Goodwin cover proven steps and techniques that enable your company to take advantage of cloud infrastructure’s power and flexibility." href="http://www.oreilly.com/programming/free/migrating-java-to-the-cloud.csp" data-original-title="Migrating Java to the Cloud">
+        <img src="./Free Programming Ebooks - O&#39;Reilly Media_files/cat(27).gif" alt="Migrating Java to the Cloud">
+      </a>
+
+      <a data-toggle="popover" data-container="body" data-trigger="hover" data-placement="auto left" title="" data-content="Authors Mike Roberts and John Chapin, co-founders of the Symphonia Serverless and cloud technology consultancy, take you through the Serverless landscape—particularly the design considerations, tooling, and approaches to operational management you need to make it work. Is Serverless the right choice for you and your team? Dive into this report and find out." href="http://www.oreilly.com/programming/free/what-is-serverless.csp" data-original-title="What Is Serverless?">
+        <img src="./Free Programming Ebooks - O&#39;Reilly Media_files/cat(28).gif" alt="What Is Serverless?">
+      </a>
+
+      <a data-toggle="popover" data-container="body" data-trigger="hover" data-placement="auto left" title="" data-content="In this report, author Susan Fowler looks at lessons learned from driving a production-readiness initiative across Uber’s more than one thousand microservices. You’ll explore eight production-readiness requirements that she and her fellow SREs at Uber adopted after countless hours of research inside and outside the company." href="http://www.oreilly.com/programming/free/microservices-in-production.csp" data-original-title="Microservices in Production: Standard Principles and Requirements">
+        <img src="./Free Programming Ebooks - O&#39;Reilly Media_files/cat(29).gif" alt="Microservices in Production">
+      </a>
+
+      <a data-toggle="popover" data-container="body" data-trigger="hover" data-placement="auto left" title="" data-content="Remember when service-oriented architecture (SOA) was all the rage? Companies jumped in before fully understanding SOA&#39;s advantages and disadvantages, and struggled to make this complex architecture work. Today, we&#39;re poised to repeat this same experience with microservices—only this time we&#39;re prepared. With this concise ebook, author Mark Richards walks you through the ten most common microservice anti-patterns and pitfalls, and provides solutions for avoiding them." href="http://www.oreilly.com/programming/free/microservices-antipatterns-and-pitfalls.csp" data-original-title="Microservices AntiPatterns and Pitfalls">
+        <img src="./Free Programming Ebooks - O&#39;Reilly Media_files/cat(30).gif" alt="Microservices AntiPatterns and Pitfalls">
+      </a>
+
+      <a data-toggle="popover" data-container="body" data-trigger="hover" data-placement="auto left" title="" data-content="Through interviews with financial, technology, and legal experts, author Mike Barlow explores efforts to make financial services platforms more developer-friendly." href="http://www.oreilly.com/programming/free/evolving-architectures-of-fintech.csp?intcmp=il-prog-free-product-lgen_evolving_architectures_fintech" data-original-title="Evolving Architectures of FinTech: Structuring a New Generation of Financial Services with Modular Software and Agile Development Strategies">
+        <img src="./Free Programming Ebooks - O&#39;Reilly Media_files/cat(31).gif" alt="Evolving Architectures of FinTech">
+      </a>
+
+      <a data-toggle="popover" data-container="body" data-trigger="hover" data-placement="auto left" title="" data-content="The success of any application or system depends on the architecture pattern you use. By describing the overall characteristics of the architecture, these patterns not only guide designers and developers on how to design components, but also determine the ways in which those components should interact." href="http://www.oreilly.com/programming/free/software-architecture-patterns.csp?intcmp=il-prog-free-product-lgen_sa_patterns" data-original-title="Software Architecture Patterns">
+        <img src="./Free Programming Ebooks - O&#39;Reilly Media_files/cat(32).gif" alt="Software Architecture Patterns">
+      </a>
+
+      <a data-toggle="popover" data-container="body" data-trigger="hover" data-placement="auto left" title="" data-content="Adoption of cloud-native application architectures is helping many organizations transform their IT into a force for true agility in the marketplace. This O’Reilly ebook defines the unique characteristics of cloud-native application architectures such as microservices and twelve-factor applications." href="http://www.oreilly.com/programming/free/migrating-cloud-native-application-architectures.csp?intcmp=il-prog-free-product-lgen_cloud_native_aa" data-original-title="Migrating to Cloud-Native Application Architectures">
+        <img src="./Free Programming Ebooks - O&#39;Reilly Media_files/cat(33).gif" alt="Migrating to Cloud-Native Application Architectures">
+      </a>
+
+    </div>
+  </section>
+
+
+  <aside class="page-width pa-links" role="complimentary">
+
+    <h2 class="report-dek">You might also be interested in our other free ebooks:</h2>
+
+    <p>
+      <a href="http://www.oreilly.com/business/free/">Business</a>
+      <a href="http://www.oreilly.com/data/free/">Data</a>
+      <a href="http://www.oreilly.com/iot/free/">IoT</a>
+      <a href="http://www.oreilly.com/security/free/">Security</a>
+      <a href="http://www.oreilly.com/web-platform/free/">Web Development</a>
+      <a href="http://www.oreilly.com/webops/free/">WebOps</a>
+    </p>
+
+  </aside>
+
+</article>
+
+
+
+
+  </main>
+
+  <footer role="contentinfo">
+
+    <div class="footer-top">
+      <div class="footer-inner">
+
+        <div class="about-us" role="navigation" aria-label="company info">
+          <h3 class="title">About Us</h3>
+          <ul role="menu">
+            <li role="menuitem"><a href="http://www.oreilly.com/about/">Our Company</a></li>
+            <li role="menuitem"><a href="http://www.oreilly.com/work-with-us.html">Teach/Speak/Write</a></li>
+            <li role="menuitem"><a href="http://www.oreilly.com/careers/"> Careers </a></li>
+            <li role="menuitem"><a href="http://shop.oreilly.com/category/customer-service.do">Customer Service</a></li>
+            <li role="menuitem"><a href="http://www.oreilly.com/about/contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="social" role="navigation" aria-label="social media links">
+          <ul role="menu">
+            <li role="menuitem">
+              <a class="icon-link" href="http://twitter.com/oreillymedia">
+                <span class="icon icon-twitter t-fill icon--white">
+                  <svg id="twitter" xmlns="http://www.w3.org/2000/svg" width="24.61" height="20" viewBox="0 0 24.61 20"><title>Twitter</title><path d="M22.09,5c0,.22,0,.44,0,.65A14.27,14.27,0,0,1,7.74,20,14.28,14.28,0,0,1,0,17.73a10.54,10.54,0,0,0,1.2.07,10.13,10.13,0,0,0,6.27-2.16,5.06,5.06,0,0,1-4.72-3.5A5.16,5.16,0,0,0,5,12,5.06,5.06,0,0,1,1,7.1V7a5,5,0,0,0,2.29.63A5,5,0,0,1,1.71.92,14.33,14.33,0,0,0,12.12,6.2,5.1,5.1,0,0,1,12,5a5,5,0,0,1,5-5h0a5,5,0,0,1,3.69,1.59A10.17,10.17,0,0,0,23.93.37a5.07,5.07,0,0,1-2.22,2.79,10.1,10.1,0,0,0,2.9-.79A10.2,10.2,0,0,1,22.09,5Z"></path></svg>
+                </span>
+              </a>
+            </li><li role="menuitem">
+              <a class="icon-link" href="http://fb.co/OReilly">
+                <span class="icon icon-facebook t-fill icon--white">
+                  <svg id="facebook" xmlns="http://www.w3.org/2000/svg" width="11.11" height="20" viewBox="0 0 11.11 20"><title>Facebook</title><path d="M11.11,3.48H7.94c-.38,0-.79.49-.79,1.15V6.92h4l-.6,3.27H7.14V20H3.4V10.19H0V6.92H3.4V5A4.71,4.71,0,0,1,7.94,0h3.17V3.48Z"></path></svg>
+                </span>
+              </a>
+            </li><li role="menuitem">
+              <a class="icon-link" href="https://www.linkedin.com/company/oreilly-media">
+                <span class="icon icon-linkedin t-fill icon--white">
+                  <svg id="linkedin" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><title>LinkedIn</title><path d="M4.46,2.29A2.07,2.07,0,0,1,2.29,4.46,2.07,2.07,0,0,1,.13,2.29,2.26,2.26,0,0,1,2.29,0,2.26,2.26,0,0,1,4.46,2.29ZM0,20V5.61H4.46V20ZM6.5,6.11h3.95L10.7,8h.13A4.79,4.79,0,0,1,15,5.86c2.8,0,5,1.91,5,5.86V20H15.54V12.36c0-1.78-.64-3.06-2.17-3.06a2.18,2.18,0,0,0-2,1.78,2.48,2.48,0,0,0-.13,1V20H6.75V10.45S6.62,7.26,6.5,6.11Z"></path></svg>
+                </span>
+              </a>
+            </li><li role="menuitem">
+              <a class="icon-link" href="https://www.youtube.com/user/OreillyMedia">
+                <span class="icon icon-youtube-large t-fill icon--white">
+                  <svg id="youtube-large" xmlns="http://www.w3.org/2000/svg" width="47.87" height="20" viewBox="0 0 47.87 20"><title>YouTube</title><path d="M16.06,13.89c-.4.54-.69.86-1.06.86s-.34-.09-.4-.37V6.51H12.8v7.66a3.92,3.92,0,0,0,.2,1.4,1.09,1.09,0,0,0,1.14.71c.63,0,1.2-.4,1.91-1.17v1.06h1.83V6.51H16.06v7.37ZM8.91,6.46a2.27,2.27,0,0,0-2,.94,3.88,3.88,0,0,0-.57,2.31v3.43a3.51,3.51,0,0,0,.54,2.2,2.56,2.56,0,0,0,2,1,2.66,2.66,0,0,0,2.06-1,3.51,3.51,0,0,0,.54-2.2V9.66a3.88,3.88,0,0,0-.57-2.31,2.57,2.57,0,0,0-2-.89Zm0,8.31c-.57,0-.86-.49-.77-1.43V9.49c-.09-1,.2-1.4.77-1.4s.86.46.77,1.4v3.83C9.74,14.29,9.46,14.77,8.91,14.77ZM4.69,3.29l-1.31,5L2,3.29H0c.4,1.2,2.4,7.66,2.4,7.66v5.29H4.31V10.94l2.4-7.66ZM36.57,8.06a1.41,1.41,0,0,0-.91.43v5.8a1.24,1.24,0,0,0,.91.43c.49,0,.71-.37.71-1.34V9.31c0-1-.2-1.26-.71-1.26ZM43.71,9.2c0-.89-.23-1.14-.8-1.14s-.83.23-.83,1.14v1.06h1.63Zm3.91-4.89a6.35,6.35,0,0,0-1.11-2.83A4.14,4.14,0,0,0,43.66.29c-4-.29-10-.29-10-.29s-6,0-10,.29a4,4,0,0,0-2.86,1.2,6,6,0,0,0-1.11,2.83,43.12,43.12,0,0,0-.29,4.6v2.14a42.42,42.42,0,0,0,.29,4.6,6.35,6.35,0,0,0,1.11,2.83,4.9,4.9,0,0,0,3.14,1.2c2.23.23,9.66.31,9.66.31s6,0,10-.31a4,4,0,0,0,2.86-1.2,6,6,0,0,0,1.11-2.83,43.12,43.12,0,0,0,.29-4.6V8.91A30.34,30.34,0,0,0,47.63,4.31Zm-22,11.86H23.71v-11h-2V3.34h6V5.17H25.66v11Zm6.89,0H30.69V15.11a2.64,2.64,0,0,1-1.91,1.17,1.21,1.21,0,0,1-1.14-.71,3.92,3.92,0,0,1-.2-1.4V6.6h1.83v7.74c0,.29.14.37.4.37s.66-.31,1.06-.86V6.6h1.83v9.57h0Zm6.6-2.86a7.6,7.6,0,0,1-.17,1.91,1.44,1.44,0,0,1-1.43,1.09,2.53,2.53,0,0,1-1.83-1.09v1H34V3.37h1.71V7.54a2.43,2.43,0,0,1,1.83-1.09,1.45,1.45,0,0,1,1.4,1.11,6.87,6.87,0,0,1,.23,1.91v3.83h0Zm3.83,1.4c.43,0,.66-.23.8-.69,0-.09,0-.51,0-1.2h1.83v.29c0,.54-.06.94-.06,1.11a2.16,2.16,0,0,1-.4,1,2.39,2.39,0,0,1-2.09,1,2.49,2.49,0,0,1-2.09-1,3.49,3.49,0,0,1-.6-2.2V9.8a3.88,3.88,0,0,1,.57-2.31,2.46,2.46,0,0,1,2.06-1,2.37,2.37,0,0,1,2,1,3.65,3.65,0,0,1,.57,2.23v2H42.11V13.4c0,.91.23,1.31.83,1.31Z"></path></svg>
+                </span>
+              </a>
+            </li><li role="menuitem">
+              <a class="icon-link" href="http://www.oreilly.com/emails/newsletters/">
+                <span class="icon icon-google t-fill icon--white">
+                  <svg id="email" xmlns="http://www.w3.org/2000/svg" width="25" height="20" viewBox="0 0 25 20"><title>Newsletters</title><path d="M22.5,0H2.5A2.5,2.5,0,0,0,0,2.5v15A2.51,2.51,0,0,0,2.5,20h20A2.51,2.51,0,0,0,25,17.5V2.5A2.51,2.51,0,0,0,22.5,0Zm0,5-10,6.25L2.5,5V2.5l10,6.25,10-6.25Z"></path></svg>
+                </span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="legal">
+        <a href="https://www.oreilly.com/" class="logo pa-bg" title="O&#39;Reilly home page"><img src="./Free Programming Ebooks - O&#39;Reilly Media_files/oreilly-logo-norm.svg" onerror="this.src=&#39;//cdn.oreillystatic.com/images/sitewide-headers/oreilly-logo-reversed-130x23.png&#39;; this.onerror=null;" alt="O&#39;Reilly home"></a>
+        <p class="copyright">© 2018 O’Reilly Media, Inc. All trademarks and registered trademarks appearing on oreilly.com are the property of their respective owners.</p><br>
+        <p class="t-c pa-text"><a href="http://www.oreilly.com/terms/">Terms of Service</a> <span class="bullet">•</span> <a href="http://www.oreilly.com/privacy.html">Privacy Policy</a> <span class="bullet">•</span> <a href="http://www.oreilly.com/about/editorial_independence.html">Editorial Independence</a></p>
+      </div>
+      
+      <figure class="animal">
+        <img class="tarsier" src="./Free Programming Ebooks - O&#39;Reilly Media_files/tarsier-footer.png" alt="Tarsier">
+      </figure>
+    </div>
+
+  </footer>
+
+<!-- search bar - desktop behavior -->
+
+<script type="text/javascript" id="">(function(){function b(){!1===c&&(c=!0,Munchkin.init("107-FMS-070"))}var c=!1,a=document.createElement("script");a.type="text/javascript";a.async=!0;a.src="//munchkin.marketo.net/munchkin.js";a.onreadystatechange=function(){"complete"!=this.readyState&&"loaded"!=this.readyState||b()};a.onload=b;document.getElementsByTagName("head")[0].appendChild(a)})();</script><script type="text/javascript" id="" src="./Free Programming Ebooks - O&#39;Reilly Media_files/digitalpi-utm-tracker-oreilly.com.js.download"></script><script type="text/javascript" id="">!function(b,e,f,g,a,c,d){b.fbq||(a=b.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");fbq("init","1732687426968531");fbq("track","PageView");</script>
+<noscript>&lt;img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1732687426968531&amp;amp;ev=PageView&amp;amp;noscript=1"&gt;</noscript><script src="./Free Programming Ebooks - O&#39;Reilly Media_files/norm-search-bar-170221.js.download" type="text/javascript"></script>
+
+
+
+<div style="height: 0 !important; width: 0 !important; line-height: 0 !important; font-size: 0 !important; margin-top: -13px; float: left;">
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+<span id="buffer-extension-hover-button" style="display: none; position: absolute; z-index: 8675309; width: 100px; height: 25px; background-image: url(&quot;chrome-extension://noojglkidnpfjbincgijbaiedldjfbhh/data/shared/img/buffer-hover-icon@2x.png&quot;); background-size: 100px 25px; opacity: 0.9; cursor: pointer; top: 636.8px; left: 443.113px;"></span><div style="width:0px; height:0px; display:none; visibility:hidden;" id="batBeacon0.6544768874786213"><img style="width:0px; height:0px; display:none; visibility:hidden;" id="batBeacon0.8804033540114629" width="0" height="0" alt="" src="./Free Programming Ebooks - O&#39;Reilly Media_files/0"></div><iframe src="./Free Programming Ebooks - O&#39;Reilly Media_files/pixel.html" style="display: none;"></iframe><script src="./Free Programming Ebooks - O&#39;Reilly Media_files/saved_resource" type="text/javascript"></script><img src="./Free Programming Ebooks - O&#39;Reilly Media_files/seg" width="1" height="1" border="0" alt="" style="display: none;"><img src="./Free Programming Ebooks - O&#39;Reilly Media_files/pixel" width="1" height="1" border="0" alt="" style="display: none;"></body><script src="./Free Programming Ebooks - O&#39;Reilly Media_files/saved_resource(1)"></script><script src="./Free Programming Ebooks - O&#39;Reilly Media_files/saved_resource(2)"></script></html>
